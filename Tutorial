@@ -1,0 +1,28 @@
+LANGKAH PERTAMA, INSTALL DI TERMINAL 
+npm create aleo-app@latest
+Kemudian ikuti tutorial https://developer.aleo.org/sdk/create-aleo-app/installation dengan memilih react + javascript + leo
+Kemudian untuk menginstall bahasa LEO, ikuti ini
+Install RUST =>
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+Install LEO =>
+
+    git clone https://github.com/AleoHQ/leo
+    cd leo
+    $ cargo install --path .
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Apabila Sudah berhasil, coba ketik LEO, apabila muncul opsi sesuatu berarti LEO sudah terinstall.
+
+Kemudian bisa melanjutkan run local host sesuai tutorial pertama, buka new terminal dan run leo untuk bikin wallet baru
+Setelah wallet terisi saldo, lakukan ini untuk mendapatkan TX berisi record :
+      https://aleo.tools/transfer 
+      ISI RECEIPENT DENGAN ADDRESS KITA, RUBAH TOGGLE PUBLIC MENJADI PUBLIC TO PRIVATE
+      Isi amount sesuka hati, Fee isi kisaran 2-3 
+      ISI PRIVATE KEY dengang wallet yang sama dengna receipent
+    Klik TRANSFER.
+
+  Kemudian ambil tx hashnya, pergi kesini => https://aleo.tools/rest
+    Masukan tx hash di kolom transaction ID di bagian get transaction. Kemudian anda akan menemukan ciphertext dengan awalan record
+    Selanjutnya pergi ke sini => https://aleo.tools/record
+    Masukan cipher text beserta view key dari wallet anda. 
+
+Kemudian masukan ciphertext kedalaam file sesuai tutorial. Setelah itu error sayapun tak tauu
